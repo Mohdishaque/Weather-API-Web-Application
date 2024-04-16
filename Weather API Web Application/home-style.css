@@ -1,0 +1,249 @@
+/* Css for body background */
+body
+{
+    font-family: Arial, sans-serif;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+	
+	
+#search-container 
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#weather-info 
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px; /* Adjust margin as needed */
+}
+
+
+/* Input Field */
+#cityInput {
+    width: 300px;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    border: 2px solid #007bff; /* Add border */
+}
+
+/* Search Button */
+#searchBtn {
+    border-radius: 0 20px 20px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+#searchBtn:hover {
+    background-color: #0056b3; /* Darken color on hover */
+}
+
+/* Weather Info Output Section */
+#weather-info {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+#weather-info h4,
+#weather-info h5 {
+    margin: 10px 0;
+}
+
+#weather-info h4 {
+    font-size: 24px;
+    color: #333;
+}
+
+#weather-info h5 {
+    font-size: 20px;
+    color: #555;
+}
+
+
+  /* Sidebar */
+  .sidebar {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: #343a40;
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   }
+
+   .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+   }
+
+   .sidebar a:hover {
+    background-color: #555;
+   }
+
+   .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+   }
+
+   @media screen and (max-height: 450px) {
+   .sidebar {padding-top: 15px;}
+   .sidebar a {font-size: 18px;}
+   }
+
+   /* Shifted content */
+   .shifted {
+      margin-left: 250px;
+      transition: margin-left 0.5s;
+   }
+
+   /* Shifted navbar */
+   .navbar-shifted {
+       padding-left: 250px;
+       transition: padding-left 0.5s;
+   }
+
+    /* Main content */
+    .content {
+       padding-top: 80px;
+       transition: padding-left 0.5s;
+    }
+
+    /* Footer */
+.footer {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center; /* Center the text */
+}
+
+.footer a {
+    color: #343a40;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+    /* Button */
+    .btn {
+        border-radius: 20px;
+    }
+
+    /* Form */
+    .form-control {
+        border-radius: 10px;
+    }
+
+    /* Header */
+    header {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    /* About Section */
+    #about {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+    }
+
+    #about h2 {
+        font-size: 32px;
+    }
+
+    #about p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Home Section */
+    #home {
+        padding: 60px 0;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #cityInput {
+        width: 300px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    #searchBtn {
+        border-radius: 0 20px 20px 0;
+    }
+
+    /* Feedback Section */
+    #feedback {
+        padding: 60px 0;
+    }
+
+    #feedback form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #feedback h2 {
+        font-size: 32px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 28px;
+        }
+
+        .sidebar a {
+            font-size: 18px;
+        }
+
+        #about p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        header h1 {
+            font-size: 24px;
+        }
+
+        .sidebar a {
+            font-size: 16px;
+        }
+
+        #about h2 {
+            font-size: 24px;
+        }
+
+        #about p {
+            font-size: 14px;
+        }
+    }

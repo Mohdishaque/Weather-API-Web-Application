@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather API Web Application</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="home-style.css">
+</style>
+</style>
+</head>
+<body>
+
+<!-- Header Start -->
+<header class="bg-dark py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-white">Weather API</h1>
+            </div>
+
+            <div class="col text-right">
+                <a href="#home" class="btn btn-dark ml-2">Home</a>
+                <a href="#about" class="btn btn-dark ml-2">About</a>
+                <a href="#feedback" class="btn btn-dark ml-2">Feedback</a>
+                <a href="#footer" class="btn btn-dark ml-2">Contact Us</a>
+                <button class="btn btn-dark" onclick="toggleNav()">&#9776;</button>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+
+<!-- Sidebar Start-->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#footer">Contact Us</a>
+</div>
+<!-- Sidebar End-->
+
+
+<!-- Main content Start -->
+ <div class="content" id="main-content">
+    <!-- About section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="mb-4">About</h2>
+            <p class="lead">This is the Weather API Web Application. Our Weather API provides accurate and up-to-date
+            weather information for any location worldwide. You can use it to retrieve current weather conditions, forecasts,
+            and more. With our API, you can integrate weather data into your applications, websites, or projects with ease.</p>
+        </div>
+</section>
+<!-- Main content End -->
+
+
+<!-- Home Start -->
+  <section id="home">
+     <div class="container">
+       <div class="row">
+         <div class="col">
+            <div class="search-container">
+                <input type="text" id="cityInput" class="form-control mr-2" placeholder="Enter city name">
+                <button id="searchBtn" class="btn btn-primary" onclick="searchWeather()">Search</button>
+            </div>
+       </div>
+     </div>
+  <div id="weather-info" class="row mt-12 text-center">
+    <div class="col-md-12">
+        <h4 id="city-country"></h4>
+    </div>
+    <div class="col-md-12">
+        <h5 id="temperature"></h5>
+    </div>
+    <div class="col-md-12">
+        <h5 id="weather-description"></h5>
+    </div>
+</div>
+</div>
+</section>
+<!-- Home End -->
+    
+
+<!-- Feedback start -->
+  <section id="feedback">
+     <div class="container">
+         <h2 class="mb-4">Feedback</h2>
+            <form action="https://formspree.io/f/mkndjlog" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneno">Number:</label>
+                    <input type="text" class="form-control" id="phone" name="phoneno" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+</div>
+<!-- Feedback End-->
+
+
+<!-- Footer Start-->
+<footer class="footer bg-light mt-5" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="https://www.linkedin.com/in/mohd-ishaque-8a1b9a2a8/" target="_blank" class="ml-3">LinkedIn</a>
+                <a href="https://github.com/Mohdishaque" target="_blank" class="ml-3">GitHub</a>
+                <a href="https://linktr.ee/ishaquechaudhary" target="_blank" class="ml-3">Linktree</a>
+                <a href="mailto:mohdishaquechaudhay72@gmail.com" target="_blank" class="ml-3">Email</a>
+                <a href="https://drive.google.com/file/d/1Yn4X1LMa8TguIUsKkn8ghZn903a-WZfD/view?usp=sharing" target="_blank" class="ml-3">Download Documentation</a>
+            </div>
+        </div>
+     <hr>
+        <p class="text-center">&copy; Copyright 2024 by Weather API Web Application. All rights reserved.</p>
+
+    </div>
+</footer>
+<!-- Footer End-->
+
+
+<script src="app.js"></script>
+<script>
+    function toggleNav() {
+        var sidebar = document.getElementById("mySidebar");
+        var content = document.getElementById("main-content");
+        var footer = document.getElementById("footer");
+        var navbar = document.querySelector("header");
+
+        if (sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
+            content.classList.remove('shifted');
+            footer.classList.remove('shifted');
+            navbar.classList.remove('navbar-shifted');
+        } else {
+            sidebar.style.width = "250px";
+            content.classList.add('shifted');
+            footer.classList.add('shifted');
+            navbar.classList.add('navbar-shifted');
+       }
+    }
+</script>
+</body>
+</html>
